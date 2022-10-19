@@ -29,10 +29,9 @@ def get_item(req, item_id):
                     "name": item.name,
                     "price": item.price,
                     "image": item.image,
-                "comments": comments
-                },
-            }
-    print(context)        
+                    "comments": comments
+                }
+            }     
     return render(req, "item_detail.html", context)
 
 

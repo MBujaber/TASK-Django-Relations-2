@@ -15,7 +15,7 @@ class Category(models.Model):
 
 class Item(models.Model):
 
-    category = models.ForeignKey("Category", on_delete=models.CASCADE, related_name="items", null=True)
+    category = models.ForeignKey("Category", on_delete=models.CASCADE, related_name="items")
 
     name = models.CharField(max_length=150)
     image = models.TextField()
@@ -28,7 +28,7 @@ class Item(models.Model):
 
 class Comment(models.Model):
     message = models.TextField()
-    item = models.ForeignKey("Item", on_delete=models.CASCADE, related_name="comments", null=True)
+    item = models.ForeignKey("Item", on_delete=models.CASCADE, related_name="comments")
 
     def __str__(self):
         return self.message

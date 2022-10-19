@@ -27,6 +27,7 @@
               src="{{item.image}}"
               class="card-img-top"
               alt="{{item.name}}"
+              style="height: 250px; max-width: fit-content"
             />
             <div class="card-body">
               <h5 class="card-title">
@@ -35,12 +36,15 @@
                 >
               </h5>
               <p class="card-text">{{item.price}} KD</p>
-              <img
-                src="{{item.category.image}}"
-                class="card-img-top"
-                alt="{{item.category.image}}"
-              />
-              <p class="card-text">{{item.category.name}}</p>
+              <div class="d-flex justify-content-start">
+                <img
+                  src="{{item.category.image}}"
+                  class="card-img-top me-2"
+                  alt="{{item.category.image}}"
+                  style="width: 30px"
+                />
+                <p class="card-text">{{item.category.name}}</p>
+              </div>
             </div>
           </div>
         </div>
