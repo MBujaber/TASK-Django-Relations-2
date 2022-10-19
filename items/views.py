@@ -14,6 +14,7 @@ def get_items(req):
                 "name": item.name,
                 "price": item.price,
                 "image": item.image,
+                "category": item.category
             }
         )
     context = {"items": _items}
@@ -21,14 +22,17 @@ def get_items(req):
 
 def get_item(req, item_id):
     item = Item.objects.get(id=item_id)
+    comments = item.comments.all()
     context = {
                "item": { 
                     "id": item.id,
                     "name": item.name,
                     "price": item.price,
-                    "image": item.image
-                }
+                    "image": item.image,
+                "comments": comments
+                },
             }
+    print(context)        
     return render(req, "item_detail.html", context)
 
 
