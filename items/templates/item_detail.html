@@ -25,11 +25,12 @@
           <h5 class="card-title">{{item.name}}</h5>
           <p class="card-text">{{item.price}} KD</p>
           <h6 class="card-text">Comments:</h6>
-            {% for comment in item.comments %}
-            <ul class="list-group list-group-flush">
-
-              <li class="list-group-item">{{comment.message}}</li>
-            {% endfor %}
+          <ol class="list-group list-group-numbered rounded-3">
+                {% for comment in item.comments %}
+                <li class="list-group-item">{{comment.message}}</li>
+                {% endfor %}
+              </ol>
+            </ul>
           </p>
         </div>
       </div>
