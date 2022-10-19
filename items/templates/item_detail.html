@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="bg-light">
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Bakery</a>
@@ -27,7 +27,7 @@
           <h6 class="card-text">Comments:</h6>
           <ol class="list-group list-group-numbered rounded-3">
                 {% for comment in item.comments %}
-                <li class="list-group-item">{{comment.message}}</li>
+                <li class="list-group-item bg-light">{{comment.message}}</li>
                 {% endfor %}
               </ol>
             </ul>
